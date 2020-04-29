@@ -11,18 +11,21 @@ package logisticaapp;
  */
 
 import java.util.Scanner;
+
 public class LogisticaApp {
 
     /**
      * @param args the command line arguments
      */
     
+    //Este método mete un camión
     static int meter(LogisticaControlContenedor control){
         int almacen;
         almacen = control.descargar();
         return almacen;
     }
     
+    //Este método saca un camión
     static int sacar (LogisticaControlContenedor control) {
         int almacen;
         almacen = control.cargar();
@@ -32,6 +35,7 @@ public class LogisticaApp {
     public static void main(String[] args) {
         
         Scanner tec = new Scanner(System.in);
+        
         int opcion, almacen;
         String funcion;
         LogisticaControlContenedor control = new LogisticaControlContenedor();
